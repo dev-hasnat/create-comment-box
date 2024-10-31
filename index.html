@@ -4,21 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Comment Box</title>
 </head>
 
 <body>
-<h1>Hello this is a comment box.</h1>
-<input id="input" type="text" placeholder="Write your comment">
-<button id="btn">Comment</button>
+  <h1>Hello, This is Abu Hasnat.</h1>
+  
+  <div id="comments-section"></div>
+  
+  <input id="input" type="text" placeholder="Write your comment">
+  <button id="btn">Comment</button>
+
+  <script>
+    let input = document.getElementById("input");
+    let btn = document.getElementById("btn");
+    let commentsSection = document.getElementById("comments-section");
+
+    btn.addEventListener("click", function() {
+      let value = input.value;
+
+      if (value.trim() !== "") {
+        let comment = document.createElement("p");
+        comment.textContent = value;
+        commentsSection.append(comment);
+
+        input.value = "";
+      }
+    });
+  </script>
 </body>
 
-<script>
-let input = document.getElemengetElementById(input)
-let btn = document.getElementById(btn)
-let value = input.value
-addEventListener.btn('click',Functionn(){
-  style.
-})
-</script>
 </html>
